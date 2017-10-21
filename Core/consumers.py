@@ -47,7 +47,7 @@ def ws_receive(message):
             params = {
                 'channel' : current_channel,
                 'user' : message.user,
-                'message': payload['message']['data']
+                'message': payload['message']['data'],
             }
 
             entry = ChannelLogs(**params)
