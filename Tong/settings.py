@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Core',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,13 @@ USE_TZ = True
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'Static')]
 
 STATIC_URL = '/static/'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'asgi_redis.RedisChannelLayer',
+        'ROUTING': 'Tong.routing.channel_routing',
+        'CONFIG' : {
+            'hosts' : [('localhost', 6379)]
+        }
+    }
+}

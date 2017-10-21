@@ -1,0 +1,179 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+/*
+ * Dashboard
+ */
+
+ /* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.channeldisplay {
+    padding: 0;
+    background-color: gray;
+    height: calc(100vh - 56px);
+    overflow: auto;
+
+}
+
+.channelOutput {
+    background-color: #FFF;
+    position: absolute;
+    bottom: 50px;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+}
+
+.channelOutput .message {
+    border-bottom: 1px solid #ededed;
+    margin: 5px;
+    padding: 3px;
+
+}
+.channelOutput .icon {
+    display: inline;
+}
+
+.channelOutput .icon i {
+    font-size: 18px;
+    padding: 3px;
+    margin-right: 5px;
+    vertical-align: center;
+    text-align: center;
+    border-radius: 25px;
+    background: #EAEAEA;
+    color: #006699;
+
+}
+
+
+.channelOutput .name {
+    display: inline;
+}
+.channelOutput .name em {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+
+.channelOutput .body {
+    padding-left: 25px;
+}
+.channelOutput .body .data {}
+
+
+.channelInput {
+    background-color: #FFF;
+    border-top: 1px solid #ededed;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.channelInput .inputText {
+    display: inline;
+    padding: 2px;
+}
+
+.channelInput .inputText textarea {
+    border: 0;
+    outline: 0;
+    width: calc(100% - 50px);
+    height: 40px;
+    font-size: 14px;
+    resize: none;
+
+}
+
+.channelInput .inputButton {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 40px;
+}
+
+.channelInput .inputButton button {
+    border: 0;
+    height: 40px;
+    width:  50px;
+    outline: 0;
+    background: #efefef;
+}
+
+
+
+.channelMessage {
+    background-color: #FFF;
+    border-bottom: 1px solid #CDCDCD;
+    padding: 2px;
+
+}
+
+
+
+

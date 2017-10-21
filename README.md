@@ -15,7 +15,10 @@ Team Name (The Fighting Hell Fish = @thefightinghellfish)
 
 
 2. Team Leader must verifiy email to enable advanced features:
-2a. Add Rooms, change room defaults, add team members, 
+2a. Create Rooms
+2b. Change Room defaults
+2c. Send invites
+  
 
 
 

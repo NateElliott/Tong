@@ -17,11 +17,19 @@
         <div class="container">
             <div class="header clearfix">
             <nav>
+            {% if user.is_authenticated %}
                 <ul class="nav nav-pills float-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
+                        <a class="nav-link" href="/signout">Sign Out</a>
                     </li>
                 </ul>
+            {% else %}
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signin">Sign In</a>
+                    </li>
+                </ul>
+            {% endif %}
             </nav>
             <h3 class="text-muted">Tong</h3>
             </div>
