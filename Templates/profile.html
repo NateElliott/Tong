@@ -1,0 +1,57 @@
+{% extends 'UI/base.html' %}
+
+{% block css_include %}{% endblock %}
+
+{% block js_include %}{% endblock %}
+
+{% block js %}<script></script>{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+
+    <div>
+    <h4>
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+        {{user.profile.displayname}}
+    </h4>
+    <hr>
+    </div>
+
+    <div>
+        <h5>My Teams</h5>
+        {% for team in teams %}
+
+            <a href="/teams/{{ team.url }}">{{ team.displayname }}</a>
+
+
+
+
+        {% endfor %}
+    </div>
+
+    <div>
+    {% if user.is_active %}
+        <h5>Create Team</h5>
+        <form method="post" action="/teams/create">
+            {% csrf_token %}
+             <div class="form-row align-items-center">
+                <div class="col-sm-6">
+                    <label class="sr-only" for="teamname">Username</label>
+                    <div class="input-group mb-2 mb-sm-0">
+                        <input type="text" class="form-control" name="teamname" id="teamname" placeholder="The Flying Hellfish">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+              </div>
+        </form>
+    {% endif %}
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'UI/base.html' %}
+
+{% block css_include %}{% endblock %}
+
+{% block js_include %}{% endblock %}
+
+{% block js %}<script></script>{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h3>Welcome.</h3>
+
+<form method="post" action="register">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="displayname">Display name</label>
+        <input type="text" class="form-control" name="displayname" id="displayname" aria-describedby="displayname" placeholder="J. Doe">
+        <small id="emailHelp" class="form-text text-muted">This will be your public name on Tong</small>
+    </div>
+    <div class="form-check">
+        <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" checked="checked">
+            <div>Send verification email.</div>
+
+    </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Finish</button>
+</form>
+
+</div>
+
+
+
+
+{% endblock %}

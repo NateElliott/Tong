@@ -1,0 +1,32 @@
+{% extends 'UI/base.html' %}
+
+{% block css_include %}{% endblock %}
+
+{% block js_include %}{% endblock %}
+
+{% block js %}<script></script>{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <h3>Sign in</h3>
+    <form method="post" action="/signin">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="registeremail">Email address</label>
+            <input type="email" class="form-control" id="registeremail" name="email" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="registerpassword">Password</label>
+            <input type="password" class="form-control" id="registerpassword" name="password" placeholder="Password"><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+</div>
+
+
+{% endblock %}
